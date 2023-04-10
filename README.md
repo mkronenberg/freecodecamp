@@ -1,2 +1,2 @@
-# freecodecamp
-freeCodeCamp projects and quizes
+# freeCodeCamp
+projects and quizes
