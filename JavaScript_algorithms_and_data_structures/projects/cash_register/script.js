@@ -34,7 +34,7 @@ function checkCashRegister(price, cash, cid) {
       0,
     ).toFixed(2);
 
-    // loop through each denomination from top to botton
+    // loop through each denomination from top to bottom
     for (let index = 8; index >= 0; index--) {
       let [denomination, value] = cid[index];
           //console.log("at start of loop remainderDue = " + remainderDue)
@@ -50,14 +50,14 @@ function checkCashRegister(price, cash, cid) {
       remainderDue = (remainderDue - dispenseCash).toFixed(2);
           //console.log("at end of loop remainderDue = " + remainderDue)
     }
-    console.log("cash due is " + changeDue + " remainder after test is " + remainderDue + " and amount in register is " + totalcid)
+        //console.log("cash due is " + changeDue + " remainder after test is " + remainderDue + " and amount in register is " + totalcid)
     if (remainderDue > 0) {return "INSUFFICIENT_FUNDS"}
     else if (changeDue == totalcid) {return "CLOSED"}
     else if (changeDue < totalcid) {return "OPEN"}
   }
 
   const registerStatus = statusGenerator();
-  console.log("register status is " + registerStatus)
+      //console.log("register status is " + registerStatus)
   
   if (registerStatus === "INSUFFICIENT_FUNDS") {
     return {status: "INSUFFICIENT_FUNDS", change: []};
